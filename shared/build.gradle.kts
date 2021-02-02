@@ -35,6 +35,12 @@ kotlin {
     version = "1.1"
 
     sourceSets {
+        val commonModel by creating {
+        }
+        val commonMain by getting{
+            kotlin.srcDir("src/commonModel/kotlin")
+            resources.srcDir("src/commonModel/resources")
+        }
         all {
             languageSettings.apply {
                 useExperimentalAnnotation("kotlin.RequiresOptIn")
@@ -42,6 +48,8 @@ kotlin {
             }
         }
     }
+
+    sourceSets["commonModel"]
 
     sourceSets["commonMain"].dependencies {
         implementation(Deps.SqlDelight.runtime)
