@@ -36,11 +36,11 @@ kotlin {
 
     sourceSets {
         val commonMain by getting{
-            //kotlin.srcDir("src/commonModel/kotlin")
-            //resources.srcDir("src/commonModel/resources")
+
         }
         val commonModel by creating {
             commonMain.dependsOn(this)
+            kotlin.exclude("build/generated/sqldelight/code/KaMPKitDb/**")
         }
         all {
             languageSettings.apply {
