@@ -14,11 +14,11 @@ The goal of the KaMP Kit is to facilitate your evaluation of Kotlin Multiplatfor
 
 The KMP ecosystem has generated a lot of excitement, and has evolved very rapidly. As a result, there's a lot of old or conflicting documentation, blog posts, tutorials, etc. We, Touchlab, have worked with several teams looking at KMP, and have found that the **primary** stumbling block is simply getting started.
 
-The KaMP Kit is designed to get you past that primary stumbling block. You should be able to set up your development environment, clone the repo, and have a running sample app very quickly. From there, you can focus on what you want to build.
+The KaMP Kit is designed to get you past that primary stumbling block. You should be able to set up your development environment, clone the repo, and have a running kamil.sample app very quickly. From there, you can focus on what you want to build.
 
 #### *Very Important Message!!!*
 
-This kit exists because the info you may find from Google about KMP is likely to be more confusing than helpful. To make sure you minimize the time spent trying to get started, it's important to ***stick to this kit exclusively until you get something running***. The sample project is designed to be run with minimal setup. If you run into issues building the sample project, please reach out directly so we can sort out your issue and improve our docs.
+This kit exists because the info you may find from Google about KMP is likely to be more confusing than helpful. To make sure you minimize the time spent trying to get started, it's important to ***stick to this kit exclusively until you get something running***. The kamil.sample project is designed to be run with minimal setup. If you run into issues building the kamil.sample project, please reach out directly so we can sort out your issue and improve our docs.
 
 ### Audience
 
@@ -65,7 +65,7 @@ See [APP_BUILD](docs/APP_BUILD.md) for detailed build instructions. By the end o
 
 ## Sanity Check
 
-At this point, you should be able to build Android and iOS apps. **If you cannot build, you need to get help.** This sample app is configured to run out of the box, so if it's not working, you have something wrong with your build setup or config. Please [reach out to us](CONTACT_US.md) so we can improve either the config or troubleshooting docs, and/or the Kotlin Slack group mentioned above.
+At this point, you should be able to build Android and iOS apps. **If you cannot build, you need to get help.** This kamil.sample app is configured to run out of the box, so if it's not working, you have something wrong with your build setup or config. Please [reach out to us](CONTACT_US.md) so we can improve either the config or troubleshooting docs, and/or the Kotlin Slack group mentioned above.
 
 ---
 

@@ -13,7 +13,7 @@ object Versions {
     val karmok = "0.1.8"
     val koin = "3.0.0-alpha-4"
     val ktlint_gradle_plugin = "9.4.1"
-    val ktor = "1.5.0"
+    val ktor = "1.5.1"
     val junit = "4.13.1"
     val material = "1.2.1"
     val desugarJdkLibs = "1.1.1"
@@ -37,6 +37,9 @@ object Versions {
 }
 
 object Deps {
+
+    private fun ktor(s: String = "", v: String = Versions.ktor) = "io.ktor:ktor$s:$v"
+
     val android_gradle_plugin = "com.android.tools.build:gradle:${Versions.android_gradle_plugin}"
     val cocoapodsext = "co.touchlab:kotlinnativecocoapods:${Versions.cocoapodsext}"
     val junit = "junit:junit:${Versions.junit}"
@@ -102,5 +105,12 @@ object Deps {
         val androidCore = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
         val ios = "io.ktor:ktor-client-ios:${Versions.ktor}"
         val commonSerialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
+
+        val ktorServer = ktor()
+        val ktorServerGson = ktor("-gson")
+
+        val ktorServerHtmlBuilder = ktor("-html-builder")
+        val ktorServerNetty = ktor("-server-netty")
+        val ktorServerTestHost = ktor("-server-test-host")
     }
 }

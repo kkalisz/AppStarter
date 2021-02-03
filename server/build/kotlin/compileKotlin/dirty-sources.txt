@@ -1,0 +1,3 @@
+/Users/kamil/dev-home/AppStarter/server/src/main/kotlin/com/kalisz/kamil/sample/SampleServer.kt
+/Users/kamil/dev-home/AppStarter/server/src/main/java/Test.kt
+/Users/kamil/dev-home/AppStarter/shared/src/commonModel/kotlin/foo/Elo.kt

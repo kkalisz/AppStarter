@@ -56,7 +56,7 @@ You may be asking where the Multiplatform-settings comes in. When the BreedModel
 
 ## Kotlinx Coroutines
 
-Because of Kotlin/Native's unique threading and state model, coroutines support has been limited to a single thread until very recently. Back in November, a [pull request](https://github.com/Kotlin/kotlinx.coroutines/pull/1648) arrived in the kotlinx.coroutines repo with support for multithreaded coroutines. That is still a PR and is still experimental, but we've included that version in the sample app because it'll be live in the near future. As an alternative, many applications are using [CoroutineWorker](https://github.com/Autodesk/coroutineworker) in production.
+Because of Kotlin/Native's unique threading and state model, coroutines support has been limited to a single thread until very recently. Back in November, a [pull request](https://github.com/Kotlin/kotlinx.coroutines/pull/1648) arrived in the kotlinx.coroutines repo with support for multithreaded coroutines. That is still a PR and is still experimental, but we've included that version in the kamil.sample app because it'll be live in the near future. As an alternative, many applications are using [CoroutineWorker](https://github.com/Autodesk/coroutineworker) in production.
 
 So, to be clear, ***we're using a version of [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) that is still in development***. In our experience it works well, and will likely be merged into the main repo soon, so it makes sense to learn that version.
 

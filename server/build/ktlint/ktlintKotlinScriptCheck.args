@@ -1,0 +1,6 @@
+--verbose
+--reporter=plain
+--color
+--experimental
+--reporter=plain,output=/Users/kamil/dev-home/AppStarter/server/build/reports/ktlint/ktlintKotlinScriptCheck/ktlintKotlinScriptCheck.txt
+"build.gradle.kts"

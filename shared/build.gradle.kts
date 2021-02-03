@@ -35,11 +35,12 @@ kotlin {
     version = "1.1"
 
     sourceSets {
-        val commonModel by creating {
-        }
         val commonMain by getting{
-            kotlin.srcDir("src/commonModel/kotlin")
-            resources.srcDir("src/commonModel/resources")
+            //kotlin.srcDir("src/commonModel/kotlin")
+            //resources.srcDir("src/commonModel/resources")
+        }
+        val commonModel by creating {
+            commonMain.dependsOn(this)
         }
         all {
             languageSettings.apply {

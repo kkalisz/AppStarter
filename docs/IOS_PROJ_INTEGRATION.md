@@ -56,7 +56,7 @@ target 'YourIosAppTargetName' do
 end
 ```
 
-Now, replace `YourIosAppTargetName` with, you guessed it, your iOS app's target name. In the KaMPKit iOS sample
+Now, replace `YourIosAppTargetName` with, you guessed it, your iOS app's target name. In the KaMPKit iOS kamil.sample
  app, that would be `KaMPKitIos`.
 
 
