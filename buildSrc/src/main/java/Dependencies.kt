@@ -112,5 +112,6 @@ object Deps {
         val ktorServerHtmlBuilder = ktor("-html-builder")
         val ktorServerNetty = ktor("-server-netty")
         val ktorServerTestHost = ktor("-server-test-host")
+        val ktorServerSerialization = ktor("-serialization")
     }
 }

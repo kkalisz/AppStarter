@@ -35,8 +35,7 @@ kotlin {
     version = "1.1"
 
     sourceSets {
-        val commonMain by getting{
-
+        val commonMain by getting {
         }
         val commonModel by creating {
             commonMain.dependsOn(this)
@@ -50,7 +49,9 @@ kotlin {
         }
     }
 
-    sourceSets["commonModel"]
+    sourceSets["commonModel"].dependencies {
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+    }
 
     sourceSets["commonMain"].dependencies {
         implementation(Deps.SqlDelight.runtime)

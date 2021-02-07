@@ -1,5 +1,9 @@
+import lenala.azure.gradle.webapp.configuration.AppService
+import lenala.azure.gradle.webapp.configuration.Deployment
+
 plugins {
     kotlin("jvm")
+    id("lenala.azure.azurewebapp") version "1.0.1"
     application
 }
 
@@ -16,15 +20,36 @@ sourceSets {
     }
 }
 
+
+azureWebApp {
+    resourceGroup = "free"
+    appName = "bng-test"
+    setPricingTier(lenala.azure.gradle.webapp.model.PricingTierEnum.F1)
+    appService = AppService().apply{
+        type = lenala.azure.gradle.webapp.configuration.AppServiceType.LINUX
+        runtimeStack = "jre11"
+    }
+    authentication = lenala.azure.gradle.webapp.configuration.Authentication().apply{
+        type = lenala.azure.gradle.webapp.configuration.AuthenticationType.AZURECLI
+    }
+    deployment = Deployment().apply{
+        type = lenala.azure.gradle.webapp.configuration.DeploymentType.JAR
+        // if 'warFile' is not specified, default output of the 'war' plugin will be used
+        // warFile = '<path_to_war_file>'
+        contextPath = "build/libs/server-1.0-SNAPSHOT.jar"
+    }
+}
+
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
     implementation(Deps.Ktor.ktorServer)
     implementation(Deps.Ktor.ktorServerGson)
     implementation(Deps.Ktor.ktorServerHtmlBuilder)
     implementation(Deps.Ktor.ktorServerNetty)
+    implementation(Deps.Ktor.ktorServerSerialization)
     implementation("ch.qos.logback:logback-classic:1.2.3")
     implementation("org.slf4j:slf4j-api:1.7.30")
-
+    implementation("com.github.papsign:Ktor-OpenAPI-Generator:0.2-beta.13")
     implementation("org.xerial:sqlite-jdbc:3.30.1")
     implementation("org.jetbrains.exposed:exposed-core:0.24.1")
     implementation("org.jetbrains.exposed:exposed-dao:0.24.1")
