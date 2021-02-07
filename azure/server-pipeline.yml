@@ -10,6 +10,7 @@ steps:
   - task: Gradle@2
     inputs:
       gradleWrapperFile: 'gradlew'
+      workingDirectory: '/server'
       tasks: 'build check'
       publishJUnitResults: true
       testResultsFiles: '**/TEST-*.xml'
