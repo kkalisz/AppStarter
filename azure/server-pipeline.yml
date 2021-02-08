@@ -24,4 +24,4 @@ steps:
       WebAppName: 'bng-test'
       packageForLinux: '$(System.DefaultWorkingDirectory)/**/server-*.jar'
       RuntimeStack: 'JAVA|11-java11'
-      StartupCommand: 'java -jar server-1.0-SNAPSHOT.jar'
+      StartupCommand: 'java -jar server-1.0-SNAPSHOT.jar --server.port=443'
