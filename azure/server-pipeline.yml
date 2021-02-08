@@ -22,6 +22,6 @@ steps:
       azureSubscription: 'Płatność zgodnie z rzeczywistym użyciem(9ba7cd00-af61-43d5-ba8b-8a82e68a7d5a)'
       appType: 'webAppLinux'
       WebAppName: 'bng-test'
-      packageForLinux: '$(System.DefaultWorkingDirectory)/**/server-*.jar'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/**/server-*all.jar'
       RuntimeStack: 'JAVA|11-java11'
-      StartupCommand: 'java -jar server-1.0-SNAPSHOT.jar --server.port=443'
+      StartupCommand: 'java -jar server-1.0-SNAPSHOT-all.jar --server.port=443'

@@ -5,6 +5,7 @@ plugins {
     kotlin("jvm")
     id("lenala.azure.azurewebapp") version "1.0.1"
     application
+    id("com.github.johnrengelman.shadow") version "5.2.0"
 }
 
 val ktorVersion = "1.5.1"
@@ -69,5 +70,14 @@ tasks.withType<Test> {
 }
 
 application {
-    mainClass.set("kamil.sample.SampleServer")
+    mainClass.set("com.kalisz.kamil.sample.SampleServerKt")
+}
+
+project.setProperty("mainClassName", "com.kalisz.kamil.sample.SampleServerKt")
+
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "com.kalisz.kamil.sample.SampleServerKt"
+    }
 }
