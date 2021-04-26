@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="aCm-8v-op9">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="P9W-Mb-SSU" customClass="LoginViewController" customModule="KaMPKitiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vnv-nT-hZx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="euh-qj-e2y">
+                                <rect key="frame" x="103.5" y="398" width="207" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-tx-im2">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6C-g3-ZIh">
+                                        <rect key="frame" x="0.0" y="40" width="207" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph2-fR-9xn">
+                                        <rect key="frame" x="0.0" y="80" width="207" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="onLoginClicked:" destination="P9W-Mb-SSU" eventType="touchUpInside" id="QYl-Ap-IIN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VQn-aA-Ud5">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P3n-db-bS7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="euh-qj-e2y" firstAttribute="width" secondItem="P3n-db-bS7" secondAttribute="width" multiplier="0.5" id="HOB-Fq-SXn"/>
+                            <constraint firstItem="VQn-aA-Ud5" firstAttribute="centerX" secondItem="P3n-db-bS7" secondAttribute="centerX" id="PmG-89-bsV"/>
+                            <constraint firstItem="VQn-aA-Ud5" firstAttribute="centerY" secondItem="P3n-db-bS7" secondAttribute="centerY" id="Pw6-eS-Kvs"/>
+                            <constraint firstItem="euh-qj-e2y" firstAttribute="centerX" secondItem="P3n-db-bS7" secondAttribute="centerX" id="UIH-JY-Pin"/>
+                            <constraint firstItem="euh-qj-e2y" firstAttribute="centerY" secondItem="P3n-db-bS7" secondAttribute="centerY" id="US3-Ta-VYg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="login" destination="JYV-tx-im2" id="hCK-rd-TNF"/>
+                        <outlet property="loginButton" destination="Ph2-fR-9xn" id="AFf-YP-FzP"/>
+                        <outlet property="password" destination="u6C-g3-ZIh" id="GC3-oU-iB5"/>
+                        <outlet property="progress" destination="VQn-aA-Ud5" id="tOz-zn-9fl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWp-JQ-ynh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="49"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -4,6 +4,7 @@ plugins {
     id("kotlinx-serialization")
     id("com.android.library")
     id("com.squareup.sqldelight")
+    id("dev.icerock.mobile.multiplatform-network-generator")
 }
 
 android {
@@ -35,12 +36,6 @@ kotlin {
     version = "1.1"
 
     sourceSets {
-        val commonMain by getting {
-        }
-        val commonModel by creating {
-            commonMain.dependsOn(this)
-            kotlin.exclude("build/generated/sqldelight/code/KaMPKitDb/**")
-        }
         all {
             languageSettings.apply {
                 useExperimentalAnnotation("kotlin.RequiresOptIn")
@@ -49,9 +44,7 @@ kotlin {
         }
     }
 
-    sourceSets["commonModel"].dependencies {
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
-    }
+    targets.getByName<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>("ios").compilations["main"].kotlinOptions.freeCompilerArgs += "-Xobjc-generics"
 
     sourceSets["commonMain"].dependencies {
         implementation(Deps.SqlDelight.runtime)
@@ -59,6 +52,8 @@ kotlin {
         implementation(Deps.Ktor.commonCore)
         implementation(Deps.Ktor.commonJson)
         implementation(Deps.Ktor.commonLogging)
+        implementation(Deps.Ktor.ktorClientAuth)
+        //implementation(Deps.Ktor.ktorClientAuthLocal)
         implementation(Deps.Coroutines.common) {
             version {
                 strictly(Versions.coroutines)
@@ -69,6 +64,7 @@ kotlin {
         implementation(Deps.koinCore)
         implementation(Deps.Ktor.commonSerialization)
         implementation(Deps.kotlinxDateTime)
+        implementation("dev.icerock.moko:network:0.11.0")
         api(Deps.kermit)
     }
 
@@ -120,4 +116,23 @@ sqldelight {
     database("KaMPKitDb") {
         packageName = "co.touchlab.kampkit.db"
     }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinNativeLink>().configureEach {
+    kotlinOptions.freeCompilerArgs += "-Xobjc-generics"
+}
+
+mokoNetwork {
+    spec("pets") {
+        inputSpec = file("src/openapi.json")
+    }
+//    spec("news") {
+//        inputSpec = file("src/newsApi.yaml")
+//        packageName = "news"
+//        isInternal = false
+//        isOpen = true
+//        configureTask {
+//            // here can be configuration of https://github.com/OpenAPITools/openapi-generator GenerateTask
+//        }
+//    }
 }

@@ -1,6 +1,0 @@
---verbose
---reporter=plain
---color
---experimental
---reporter=plain,output=/Users/kamil/dev-home/AppStarter/server/build/reports/ktlint/ktlintMainSourceSetCheck/ktlintMainSourceSetCheck.txt
-"src/main/kotlin/com/kalisz/kamil/sample/SampleServer.kt"

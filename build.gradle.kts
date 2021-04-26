@@ -4,13 +4,16 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         jcenter()
+        maven(url = "https://dl.bintray.com/icerockdev/plugins")
     }
     dependencies {
         classpath(Deps.android_gradle_plugin)
         classpath(Deps.SqlDelight.gradle)
         classpath(Deps.cocoapodsext)
         classpath("org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}")
+        classpath("dev.icerock.moko:network-generator:0.11.0")
 
         classpath(kotlin("gradle-plugin", Versions.kotlin))
         // NOTE: Do not place your application dependencies here; they belong
@@ -27,10 +30,12 @@ allprojects {
         google()
         mavenCentral()
         jcenter()
+        mavenLocal()
         maven(url = "https://kotlin.bintray.com/kotlinx")
         maven(url = "https://dl.bintray.com/ekito/koin")
         maven(url = "https://oss.sonatype.org/content/repositories/snapshots/")
         maven(url = "https://jitpack.io")
+        maven(url = "https://dl.bintray.com/icerockdev/moko")
     }
 }
 

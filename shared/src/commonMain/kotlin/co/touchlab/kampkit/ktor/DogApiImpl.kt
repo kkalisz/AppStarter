@@ -3,15 +3,12 @@ package co.touchlab.kampkit.ktor
 import co.touchlab.kampkit.response.BreedResult
 import co.touchlab.kermit.Kermit
 import co.touchlab.stately.ensureNeverFrozen
-import io.ktor.client.HttpClient
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
-import io.ktor.client.features.logging.LogLevel
-import io.ktor.client.features.logging.Logger
-import io.ktor.client.features.logging.Logging
-import io.ktor.client.request.HttpRequestBuilder
-import io.ktor.client.request.get
-import io.ktor.http.takeFrom
+import io.ktor.client.*
+import io.ktor.client.features.json.*
+import io.ktor.client.features.json.serializer.*
+import io.ktor.client.features.logging.*
+import io.ktor.client.request.*
+import io.ktor.http.*
 
 class DogApiImpl(log: Kermit) : KtorApi {
 

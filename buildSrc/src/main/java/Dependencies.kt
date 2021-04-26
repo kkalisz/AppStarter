@@ -3,7 +3,7 @@ object Versions {
     val target_sdk = 30
     val compile_sdk = 30
 
-    val kotlin = "1.4.21"
+    val kotlin = "1.4.30-M1"
     val android_gradle_plugin = "4.0.1"
 
     val buildToolsVersion = "30.0.2"
@@ -13,6 +13,8 @@ object Versions {
     val karmok = "0.1.8"
     val koin = "3.0.0-alpha-4"
     val ktlint_gradle_plugin = "9.4.1"
+    //val ktor = "1.5.1"
+    //val ktor = "1.5.2-local-SNAPSHOT"
     val ktor = "1.5.1"
     val junit = "4.13.1"
     val material = "1.2.1"
@@ -113,5 +115,11 @@ object Deps {
         val ktorServerNetty = ktor("-server-netty")
         val ktorServerTestHost = ktor("-server-test-host")
         val ktorServerSerialization = ktor("-serialization")
+        val ktorServerAuthJwt = ktor("-auth-jwt")
+
+        val ktorClientAuth =  "io.ktor:ktor-client-auth:${Versions.ktor}"
+        val ktorClientAuthLocal =  "io.ktor:ktor-client-auth:1.5.3-local-SNAPSHOT"
+
+
     }
 }

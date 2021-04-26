@@ -9,15 +9,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name="co.touchlab.kampkit.android.MainApp"
-    >
-        <activity android:name="co.touchlab.kampkit.android.MainActivity">
+        android:theme="@style/Theme.MaterialComponents"
+        android:name="co.touchlab.kampkit.android.MainApp">
+        <activity android:name="pl.kalisz.kamil.app.LoginActivity"
+                android:windowSoftInputMode="adjustResize"
+                >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="co.touchlab.kampkit.android.MainActivity">
         </activity>
     </application>
 

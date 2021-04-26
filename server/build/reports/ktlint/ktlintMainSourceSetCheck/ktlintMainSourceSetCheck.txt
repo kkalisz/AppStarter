@@ -1,3 +1,0 @@
-[90m/Users/kamil/dev-home/AppStarter/server/src/main/kotlin/com/kalisz/kamil/sample/[0mSampleServer.kt[90m:[0m21[90m:1:[0m First line in a method block should not be empty[90m (experimental:no-empty-first-line-in-method-block)[0m
-[90m/Users/kamil/dev-home/AppStarter/server/src/main/kotlin/com/kalisz/kamil/sample/[0mSampleServer.kt[90m:[0m37[90m:9:[0m Missing space after //[90m (comment-spacing)[0m
-[90m/Users/kamil/dev-home/AppStarter/server/src/main/kotlin/com/kalisz/kamil/sample/[0mSampleServer.kt[90m:[0m45[90m:1:[0m Trailing space(s)[90m (no-trailing-spaces)[0m
